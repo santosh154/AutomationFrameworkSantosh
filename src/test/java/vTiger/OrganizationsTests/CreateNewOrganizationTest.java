@@ -26,7 +26,7 @@ import vTiger.ObjectRepository.OrganizationsPage;
 @Listeners(vTiger.GenericUtilities.ListenersImplementationClass.class)
 public class CreateNewOrganizationTest extends BaseClass {
 	@Test(groups="SmokeSuite")
-	public void createNewOrgTest() throws IOException {
+	public void createNewOrgTest() throws IOException, InterruptedException {
 
 		String ORGNAME = eUtil.readDataFromExcel("Organization", 1, 2) + jUtil.getRandomNumber();
 
@@ -34,6 +34,7 @@ public class CreateNewOrganizationTest extends BaseClass {
 
 		// Step 3: Navigate to Organizations LInk
 		HomePage hp = new HomePage(driver);
+		Thread.sleep(2000);
 		hp.clickOnOrgLink();
 
 		// Step 4: click on Create Organization Look Up Image
