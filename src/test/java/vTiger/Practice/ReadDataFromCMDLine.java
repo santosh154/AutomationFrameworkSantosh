@@ -11,8 +11,8 @@ public class ReadDataFromCMDLine {
 		System.out.println(BVALUE);
 		String UVALUE = System.getProperty("url");
 		System.out.println(UVALUE);
-		String ZVALUE = System.getProperty("password");
-		System.out.println(ZVALUE);
+		String PVALUE = System.getProperty("password");
+		System.out.println(PVALUE);
 	}
 
 }
